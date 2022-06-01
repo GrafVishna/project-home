@@ -731,6 +731,7 @@ body * a {
 .apartments__ittems {
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: (1fr)[2];
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
 }
@@ -1168,6 +1169,7 @@ body * a {
 .questions__form-body {
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: (1fr)[4];
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
   -webkit-box-align: center;
