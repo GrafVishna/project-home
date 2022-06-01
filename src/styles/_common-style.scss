@@ -1,0 +1,108 @@
+@font-face {
+	font-family: 'Post-No-Bills-Jaffna-SemiBold';
+	src:url('../fonts/post.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+// common
+$color1: #242B33;
+$color2: #D4C17F;
+// button
+$color4: #50555C;
+$color4-h: #95999e;
+// footer
+$color5: #2D343C;
+$font-logo: 'Post-No-Bills-Jaffna-SemiBold';
+$font-common: 'Raleway', sans-serif;
+$font-other: 'Playfair Display', serif;
+// -------------------------
+
+// -------------------------
+body {
+	background-color: $color1;
+	font-family: $font-common;
+	color: #ffffff;
+	& * a {
+		color: #ffffff;
+	}
+}
+
+.__conteiner {
+   max-width: 1167px;
+	padding: 0 30px;
+   padding: 0 20px;
+   margin: 0 auto;
+}
+
+
+.__ibg {
+   position: relative;
+   & img {
+      z-index: 2;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+		object-fit: cover;
+		top: 0;
+		left: 0;
+   }
+}
+
+.wrapper {
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+.content {
+	flex: 1 1 auto;
+}
+.__title {
+	font-family: Playfair Display;
+	color: $color2;
+	font-size: 36px;
+	font-weight: 700;
+	line-height: 48px;
+}
+.__text {
+}
+.__btn {
+	flex: 1 1 50%;
+	cursor: pointer;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: #ffffff;
+	background: $color2;
+	min-height: 40px;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: calc(22 / 16 * 100%);
+	padding: 15px 30px;
+	transition: all 0.3s ease;
+	&:focus {
+		box-shadow: 0 0 10px 0px #fff;
+	}
+	&:hover {
+		background: #fff;
+		color: $color2;
+	}
+}
+.__tel,
+.__name {
+		height: 50px;
+		text-align: center;
+		line-height: 50px;
+		background: #ffffff17;
+		color: #fff;
+		font-size: 14px;
+		cursor: pointer;
+		&::placeholder {
+			color: #fff;
+			transition: all ease 0.3s;
+		}
+		&:focus::placeholder {
+			color: rgba(255, 255, 255, 0.212);
+		}
+	}
+

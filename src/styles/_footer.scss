@@ -1,0 +1,94 @@
+.footer {
+	background: #2D343C;
+	min-height: 275px;
+
+	&__conteiner {
+	}
+
+	&__body {
+		padding: 60px 0;
+		display: flex;
+		justify-content: space-between;	
+		align-content: center;
+	}
+
+	&__logo {
+		margin-top: -10px;
+		align-items: start;
+	}
+
+	&__list {
+		padding: 15px;
+		& li:not(:last-child) {
+			margin-bottom: 15px;
+		}
+		& a, span {
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 16px;
+			letter-spacing: 0.05em;	
+			transition: color ease 0.3s;
+		}
+		& a:hover {
+			color: $color2;
+		}
+	}
+	&__list1 {
+	}
+
+	&__menu-1 {
+	}
+
+	&__menu-2 {
+	}
+
+	&__contacts {
+		padding: 15px;
+	}
+
+	&__list {
+	}
+
+	&__links {
+		margin-bottom: 15px;
+		padding: 0;
+		& span {
+			margin-right: 5px;
+		}
+	}
+
+	&__maps {
+	}
+
+	&__tel {
+	}
+
+	&__time {
+	}
+
+	&__mail {
+	}
+
+	&__social {
+		a {
+			margin-right: 20px;
+		}
+		& img {
+			height: 20px;
+		}
+	}
+
+}
+
+
+.header {
+
+	&__logo {
+	}
+
+	&__logo-title {
+	}
+
+	&__logo-subtitle {
+	}
+}

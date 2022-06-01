@@ -1,0 +1,287 @@
+
+.header {
+	position: relative;
+	z-index: 90;
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		// todo -------Burger-----------------------------------------
+		& .burger {
+			display: none;
+			width: 35px;
+			height: 35px;
+			background: url("../img/icons/22222.png") 0 0/100% auto no-repeat;
+			transition: all ease 0.3s;
+			opacity: 0.8;
+			cursor: pointer;
+		 }
+		 
+		& .burger.active {
+			transform: rotate(-180deg);
+			background: url("../img/icons/11111.png") 0 0/100% auto no-repeat;
+		 }
+	}
+	// todo ----------------------------------------------------------
+
+	// todo -------Logo-----------------------------------------------
+	&__logo {
+		padding: 25px 0;
+		display: inline-block;
+		position: relative;
+		transition: color ease 0.7s;
+		&:hover {
+			color: $color2;
+		}
+		&::before{
+			content: '';
+			width: 100%;
+			height: 1px;
+			background-color: $color2;
+			position: absolute;
+			bottom: 18px;
+			left: 0;
+			transform: scale(0);
+			transition: transform cubic-bezier(0.68,-0.55,0.265,1.55) 0.4s, box-shadow 0.4s ease 0.2s;
+		}
+		&:hover::before {
+			transform: scale(1.1);
+			box-shadow: 0px 2px 7px 0px #fff;
+		}
+	}
+
+	&__logo-title {
+		font-family: $font-logo;
+		font-size: 36px;
+		font-weight: 600;
+		line-height: 54px;
+	}
+
+	&__logo-subtitle {
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 14px;
+		letter-spacing: 1.2px;
+	}
+	& .header__contacts-tel{
+		display: none;
+	}
+// todo ------------------------------------------------------------
+
+// todo -------Menu-------------------------------------------------
+	&__menu {
+	}
+
+	&__menu-links {
+		display: flex;
+		column-gap: 40px;
+	}
+
+	&__menu-link {
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 16px;
+		letter-spacing: 0.5px;
+		position: relative;
+		& a {
+			transition: color cubic-bezier(0.68,-0.55,0.265,1.55) 0.4s;
+		}
+		& a:hover {
+			color: $color2;
+		}
+		&::before{
+			content: '';
+			width: 100%;
+			height: 1px;
+			background-color: $color2;
+			position: absolute;
+			bottom: -7px;
+			left: 0;
+			transform: scale(0);
+			transition: transform cubic-bezier(0.68,-0.55,0.265,1.55) 0.4s, box-shadow 0.4s ease 0.2s;
+		}
+		&:hover::before {
+			transform: scale(1.1);
+			box-shadow: 0px 2px 7px 0px #fff;
+		}
+	}
+}
+// todo ---------------------------------------------------------
+
+// todo -------Header Fixed Copy---------------------------------
+.header--fixed {
+	position: fixed;
+	top: -20px;
+	left: 0;
+	opacity: 0;
+	width: 100%;
+	z-index: 89;
+	transition: opacity ease 0.3s;
+	background: linear-gradient(180deg, #242B33 60.98%, #242b33ec 88.04%, #242b3300 100);
+	&.header--is-show {
+		opacity: 1;
+	}
+	& .header__contacts-tel {
+		& a {
+			color: $color2;
+			font-size: 16px;
+		}
+		position: relative;
+		display: block;
+		&::before{
+			content: '';
+			width: 100%;
+			height: 1px;
+			background-color: $color2;
+			position: absolute;
+			bottom: -8px;
+			left: 0;
+			transform: scale(0);
+			transition: transform cubic-bezier(0.68,-0.55,0.265,1.55) 0.4s, box-shadow 0.4s ease 0.2s;
+		}
+		&:hover::before {
+			transform: scale(1.1);
+			box-shadow: 0px 2px 7px 0px #fff;
+		}
+
+	}
+}
+// ---Scroll---
+
+// todo ---------------- Fon img------------------
+.images-up {
+	overflow: hidden;
+	height: 100vh;
+	position: relative;
+	&::before {
+		content: '';
+		top: 0;
+		left: 0;
+		z-index: 2;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		background: linear-gradient(180deg, #242B33 11.98%, rgba(45, 52, 60, 0.38) 51.04%, #242B33 92.19%);
+	}
+}
+// todo --------------------------------------------
+// todo -----------------text block-----------------
+.images__title {
+	position: relative;
+	z-index: 2;
+	margin-top: 5vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 10px;
+	opacity: 0;
+	// transform: translateY(200px);
+	transition: opacity 1.5s ease;
+	&._active {
+		// transform: translateY(0);
+		opacity: 1;
+	}
+	& h1 {
+		font-family: Playfair Display;
+		font-size: 48px;
+		font-weight: 700;
+		line-height: 64px;
+		text-align: center;
+		color: $color2;
+		margin-bottom: 7vh;
+	}
+}
+.scroll-img {
+	position: relative;
+	z-index: 2;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 5vh;
+	opacity: 0;
+	transition: opacity 0.5s ease 0s;
+	&._active {
+		transition: opacity 1.5s ease 0.5s;
+		opacity: 1;
+	}
+}
+.header__contacts {
+	position: absolute;
+	bottom: 17vh;
+	left: 0;
+	width: 100%;
+	z-index: 2;
+	opacity: 0.7;
+	display: flex;
+	justify-content: center;
+	column-gap: 150px;
+	& .header__contacts-map {
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 21px;
+		text-align: center;
+		position: relative;
+		transition: all 0.3s ease;
+		&:hover {
+			text-shadow: 0px 0px 15px #fff, 0px 0px 5px $color2;
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			z-index: 2;
+			background: url('../img/icons/nav.svg') 50% no-repeat;
+			left: -35px;
+			top: 0;
+			width: 23px;
+			height: 23px;
+		}
+	}
+	& .header__contacts-tel {
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 21px;
+		text-align: center;
+		position: relative;
+		transition: all 0.3s ease;
+		&:hover {
+			text-shadow: 0px 0px 15px #fff, 0px 0px 5px $color2;
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			z-index: 2;
+			background: url('../img/icons/call.svg') 50% no-repeat;
+			left: -35px;
+			top: 0;
+			width: 23px;
+			height: 23px;
+		}
+	}
+}
+
+// todo ----------------------------------------------------------
+
+.content {
+background-color: $color1;
+position: relative;
+&::before {
+	position: absolute;
+	content: '';
+	top: -50px;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	z-index: 4;
+	background: linear-gradient(180deg,  rgba(45, 52, 60, 0) 0%, #242B33 60.98%);
+}
+}
+.text{
+	font-size: 16px;
+	line-height: 20px;
+	margin-bottom: 20px;
+}
+// ============================
+
+
+// ! ----------Media-----------
+

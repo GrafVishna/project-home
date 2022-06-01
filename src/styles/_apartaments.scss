@@ -1,0 +1,130 @@
+
+
+
+.apartments {
+	padding: 45px 0 0 0;
+	&__conteiner {
+		position: relative;
+		& .number3 {
+			position: absolute;
+			top: 90px;
+			left: -190px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 100px;
+	}
+
+	&__ittems {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 30px;
+	}
+	&__ittem-text {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		z-index: 4;
+		font-size: 24px;
+		font-weight: 400;
+		line-height: 28px;
+		padding: 10%;
+		opacity: 0.6;
+		transition: opacity 0.5s ease;
+	}
+
+	&__ittem {
+		overflow: hidden;
+		position: relative;			
+		padding-bottom: 59%;
+		z-index: 3;
+		&::before {
+			content: '';
+			position: absolute;
+			z-index: 3;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			transition: top 0.7s ease;
+			background: linear-gradient(180deg, #242B33 0%, rgba(36, 43, 51, 0) 0.01%, #242B33 100%);
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			z-index: 5;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			transition: top 0.7s ease;
+			background: linear-gradient(360deg, rgba(36, 43, 51, 0) 70.01%, #242b33c0 100%);
+		}
+		&:hover {
+			z-index: 4;
+			&::before {
+				top: 100%;
+				transition: top 1.7s ease;
+			}
+			&::after {
+				top: -100%;
+				transition: top 1.7s ease;
+			}
+			& .__text {
+				opacity: 0;
+			}
+		}
+	}
+}
+.apartments-animate0 {
+	opacity: 0;
+	transition: opacity 0.4s ease 0s;
+}
+.apartments-animate1,
+.apartments-animate2,
+.apartments-animate3,
+.apartments-animate4 {
+	opacity: 0;
+	transform: translatex(0);
+	transition: opacity 0.2s ease 0s, transform 0.2s ease 0s;
+}
+.apartments-animate0._active,
+._active .apartments-animate0 {
+	opacity: 1;
+	transition: opacity 3s ease 0.4s;
+}
+.apartments-animate1._active,
+._active .apartments-animate1 {
+	opacity: 1;
+	transform: translatex(0);
+	transition: opacity 1.6s ease 0.6s, transform 0.8s ease 0.4s;
+}
+.apartments-animate2._active,
+._active .apartments-animate2 {
+	opacity: 1;
+	transform: translatex(0);
+	transition: opacity 1.6s ease 0.6s, transform 0.8s ease 0.4s;
+}
+.apartments-animate3._active,
+._active .apartments-animate3 {
+	opacity: 1;
+	transform: translatex(0);
+	transition: opacity 1.6s ease 0.6s, transform 0.8s ease 0.4s;
+}
+.apartments-animate4._active,
+._active .apartments-animate4 {
+	opacity: 1;
+	transform: translatex(0);
+	transition: opacity 1.6s ease 0.6s, transform 0.8s ease 0.4s;
+}
+.apartments-animate1,
+.apartments-animate3 {
+	transform: translatex(-200px);
+	transition: opacity 0.5s ease 0.1s, transform 1s ease 0.1s;
+}
+.apartments-animate2,
+.apartments-animate4 {
+	transform: translatex(200px);
+	transition: opacity 0.5s ease 0.1s, transform 1s ease 0.1s;
+}
