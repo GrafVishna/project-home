@@ -21,8 +21,8 @@
 		<!-- -------------------------------------------- -->
 
 		<!-- оболочка с фоновым изображением -->
-		<section class="images-up parallax-window" data-parallax="scroll" data-androidFix-boolean="null"
-			data-iosFix-boolean="null" data-speed-float="0.2" data-image-src="img/rectangle2.jpg">
+		<section class="images-up">
+			<img class="rellax" data-rellax-speed="2" src="img/rectangle2.jpg" alt="">
 			<!-- Шапка -->
 			<header der class=" header js-header-fixed">
 				<div class="header__wrapper">
@@ -52,7 +52,7 @@
 				</div>
 			</header>
 			<!-- текстовый блок внутри оболочки -->
-			<div class="images__title _anim rellax" data-rellax-speed="3">
+			<div class="images__title _anim rellax" data-rellax-speed="4">
 				<h1>Жилой комплекс<br>
 					в историческом центре</h1>
 			</div>
@@ -316,12 +316,11 @@
 
 	</div>
 	<script src="js/rellax.min.js"></script>
-	<script src="js/parallax.min.js"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script> -->
+	<!-- <script src="js/parallax.min.js"></script> -->
 	<script src="js/anim.js"></script>
 	<script src="js/video2.js"></script>
 	<script src="js/script.js"></script>
-
-	<!-- <script>videojs(document.querySelector('.video-js'));</script> -->
 	<script>
 		// Also can pass in optional settings block
 		var rellax = new Rellax('.rellax', {

@@ -5,7 +5,7 @@ cloneHeader = header.clone();
 cloneHeader.addClass('header--fixed');
 header.before(cloneHeader);
 
-
+// scroll anim header
 $(window).scroll(function () {
 	console.log($(window).scrollTop());
 	if ($(window).scrollTop() > 350) {
