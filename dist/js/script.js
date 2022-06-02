@@ -18,3 +18,10 @@ $(window).scroll(function () {
 	}
 
 });
+
+$(document).ready(function () {
+	$('.burger').click(function (event) {
+		$('.burger, .header__menu-links').toggleClass('active');
+		$('body').toggleClass('lock');
+	});
+});

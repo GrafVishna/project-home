@@ -107,6 +107,10 @@ body * a {
   color: #ffffff;
 }
 
+.body.lock {
+  overflow: hidden;
+}
+
 .__conteiner {
   max-width: 1167px;
   padding: 0 30px;
@@ -352,6 +356,39 @@ body * a {
 
 .header .header__contacts-tel {
   display: none;
+  z-index: 22;
+  position: relative;
+}
+
+.header .header__contacts-tel a {
+  color: #D4C17F;
+  font-size: 16px;
+}
+
+.header .header__contacts-tel::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #D4C17F;
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: -webkit-transform cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.4s, -webkit-box-shadow 0.4s ease 0.2s;
+  transition: -webkit-transform cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.4s, -webkit-box-shadow 0.4s ease 0.2s;
+  -o-transition: transform cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.4s, box-shadow 0.4s ease 0.2s;
+  transition: transform cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.4s, box-shadow 0.4s ease 0.2s;
+  transition: transform cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.4s, box-shadow 0.4s ease 0.2s, -webkit-transform cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.4s, -webkit-box-shadow 0.4s ease 0.2s;
+}
+
+.header .header__contacts-tel:hover::before {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  -webkit-box-shadow: 0px 2px 7px 0px #fff;
+  box-shadow: 0px 2px 7px 0px #fff;
 }
 
 .header__menu-links {
@@ -413,7 +450,7 @@ body * a {
   left: 0;
   opacity: 0;
   width: 100%;
-  z-index: 89;
+  z-index: -1;
   -webkit-transition: opacity ease 0.3s;
   -o-transition: opacity ease 0.3s;
   transition: opacity ease 0.3s;
@@ -424,42 +461,7 @@ body * a {
 
 .header--fixed.header--is-show {
   opacity: 1;
-}
-
-.header--fixed .header__contacts-tel {
-  position: relative;
-  display: block;
-}
-
-.header--fixed .header__contacts-tel a {
-  color: #D4C17F;
-  font-size: 16px;
-}
-
-.header--fixed .header__contacts-tel::before {
-  content: "";
-  width: 100%;
-  height: 1px;
-  background-color: #D4C17F;
-  position: absolute;
-  bottom: -8px;
-  left: 0;
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-  -webkit-transition: -webkit-transform cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.4s, -webkit-box-shadow 0.4s ease 0.2s;
-  transition: -webkit-transform cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.4s, -webkit-box-shadow 0.4s ease 0.2s;
-  -o-transition: transform cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.4s, box-shadow 0.4s ease 0.2s;
-  transition: transform cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.4s, box-shadow 0.4s ease 0.2s;
-  transition: transform cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.4s, box-shadow 0.4s ease 0.2s, -webkit-transform cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.4s, -webkit-box-shadow 0.4s ease 0.2s;
-}
-
-.header--fixed .header__contacts-tel:hover::before {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-  -webkit-box-shadow: 0px 2px 7px 0px #fff;
-  box-shadow: 0px 2px 7px 0px #fff;
+  z-index: 99;
 }
 
 .images-up {
@@ -508,7 +510,7 @@ body * a {
 
 .images__title h1 {
   font-family: Playfair Display;
-  font-size: 48px;
+  font-size: calc(24px + 1.25vw);
   font-weight: 700;
   line-height: 64px;
   text-align: center;
@@ -1253,4 +1255,60 @@ body * a {
 
 .footer__social img {
   height: 20px;
+}
+
+@media (max-width: 900px) {
+  .lock {
+    overflow: hidden;
+  }
+
+  .header .header__contacts-tel {
+    display: block;
+  }
+
+  .header .header--fixed .burger {
+    display: inline-block;
+    position: relative;
+    z-index: 23;
+  }
+
+  .header .burger {
+    display: block;
+    position: relative;
+    z-index: 21;
+  }
+
+  .header .header__menu-links {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    display: block;
+    -webkit-column-gap: 40px;
+    -moz-column-gap: 40px;
+    column-gap: 40px;
+    background-color: rgba(36, 43, 51, 0.7960784314);
+    padding: 150px 50px 50px 30px;
+    z-index: 9;
+    -webkit-transition: left 0.4s ease;
+    -o-transition: left 0.4s ease;
+    transition: left 0.4s ease;
+  }
+
+  .header .header__menu-links.active {
+    left: 0;
+  }
+
+  .header .header__menu-links li {
+    margin: 35px 0;
+    font-size: 30px;
+    -moz-text-align-last: center;
+    text-align-last: center;
+  }
+
+  .header .header__logo {
+    z-index: 89;
+  }
 }
