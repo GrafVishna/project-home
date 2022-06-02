@@ -517,7 +517,10 @@ body * a {
 }
 
 .scroll-img {
-  position: relative;
+  position: absolute;
+  bottom: 20vh;
+  left: 50%;
+  margin-left: -12px;
   z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
