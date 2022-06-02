@@ -17,6 +17,13 @@ $font-common: 'Raleway', sans-serif;
 $font-other: 'Playfair Display', serif;
 // -------------------------
 
+$maxWidth: 1920;
+@mixin adaptiv-font($pcSize, $mobSize) {
+ $addSize: $pcSize - $mobSize;
+ $maxWidth: $maxWidth - 320;
+ font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
 // -------------------------
 body {
 	background-color: $color1;

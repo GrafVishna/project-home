@@ -1,4 +1,4 @@
-@media (max-width: 900px) {
+@media (max-width: 800px) {
 	.lock {
 		overflow: hidden;
 	}
@@ -45,5 +45,16 @@
 		& .header__logo {
 			z-index: 89;
 		}
+	}
+}
+@media (max-width: 640px) {
+	.header__logo-title {
+		line-height: calc(44 / 36 * 100%);
+	}
+	.header__contacts {
+		flex-direction: column;
+	}
+	.scroll-img {
+		display: none;
 	}
 }

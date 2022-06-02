@@ -27,6 +27,7 @@
 
 	// todo -------Logo-----------------------------------------------
 	&__logo {
+		text-align: justify;
 		padding: 25px 0;
 		display: inline-block;
 		position: relative;
@@ -52,14 +53,14 @@
 	}
 
 	&__logo-title {
+		line-height: calc(54 / 36 * 100%);
 		font-family: $font-logo;
-		font-size: 36px;
+		@include adaptiv-font(36, 25);
 		font-weight: 600;
-		line-height: 54px;
 	}
 
 	&__logo-subtitle {
-		font-size: 12px;
+		@include adaptiv-font(12, 8);
 		font-weight: 400;
 		line-height: 14px;
 		letter-spacing: 1.2px;
@@ -69,7 +70,7 @@
 		z-index: 22;
 		& a {
 			color: $color2;
-			font-size: 16px;
+			@include adaptiv-font(30, 14);
 			
 		}
 		position: relative;
@@ -169,40 +170,40 @@
 // todo --------------------------------------------
 // todo -----------------text block-----------------
 .images__title {
-	position: relative;
+	position: absolute;
+	width: 100%;
+	top: 30%;
+	left: 0;
 	z-index: 2;
-	margin-top: 5vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	padding: 10px;
-	opacity: 0;
-	// transform: translateY(200px);
+	opacity: 0;	
 	transition: opacity 1.5s ease;
 	&._active {
-		// transform: translateY(0);
 		opacity: 1;
 	}
 	& h1 {
-		font-family: Playfair Display;
-		// font-size: 48px;
-		font-size: calc(24px + 24 * (100vw / 1920));
+		font-family: Playfair Display;		
 		font-weight: 700;
-		line-height: 64px;
+		line-height: calc(64 / 38 * 100%);
 		text-align: center;
 		color: $color2;
 		margin-bottom: 7vh;
+		@include adaptiv-font(48, 24)
 	}
 }
+
+
 .scroll-img {
 	position: absolute;
-	bottom: 20vh;
+	bottom: 15vh;
 	left: 50%;
 	margin-left: -12px;
 	z-index: 2;
 	display: flex;
 	justify-content: center;
-	margin-bottom: 5vh;
 	opacity: 0;
 	transition: opacity 0.5s ease 0s;
 	&._active {
@@ -211,6 +212,7 @@
 	}
 }
 .header__contacts {
+	display: flex;
 	position: absolute;
 	bottom: 17vh;
 	left: 0;
@@ -220,49 +222,39 @@
 	display: flex;
 	justify-content: center;
 	column-gap: 150px;
+	& .header__contacts-map,
+	.header__contacts-tel {
+		@include adaptiv-font(18, 14);
+		font-weight: 400;
+		line-height: 21px;
+		text-align: center;
+		position: relative;
+		transition: all 0.3s ease;
+		&:hover {
+			text-shadow: 0px 0px 15px #fff, 0px 0px 5px $color2;
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			z-index: 2;
+			left: -35px;
+			top: 0;
+			width: 23px;
+			height: 23px;
+		}
+	}
 	& .header__contacts-map {
-		font-size: 18px;
-		font-weight: 400;
-		line-height: 21px;
-		text-align: center;
-		position: relative;
-		transition: all 0.3s ease;
-		&:hover {
-			text-shadow: 0px 0px 15px #fff, 0px 0px 5px $color2;
-		}
 		&::before {
-			content: '';
-			position: absolute;
-			z-index: 2;
 			background: url('../img/icons/nav.svg') 50% no-repeat;
-			left: -35px;
-			top: 0;
-			width: 23px;
-			height: 23px;
+			}
 		}
-	}
 	& .header__contacts-tel {
-		font-size: 18px;
-		font-weight: 400;
-		line-height: 21px;
-		text-align: center;
-		position: relative;
-		transition: all 0.3s ease;
-		&:hover {
-			text-shadow: 0px 0px 15px #fff, 0px 0px 5px $color2;
-		}
 		&::before {
-			content: '';
-			position: absolute;
-			z-index: 2;
 			background: url('../img/icons/call.svg') 50% no-repeat;
-			left: -35px;
-			top: 0;
-			width: 23px;
-			height: 23px;
-		}
+			}
+		}	
 	}
-}
+
 
 // todo ----------------------------------------------------------
 

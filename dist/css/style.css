@@ -302,6 +302,7 @@ body * a {
 }
 
 .header__logo {
+  text-align: justify;
   padding: 25px 0;
   display: inline-block;
   position: relative;
@@ -341,14 +342,14 @@ body * a {
 }
 
 .header__logo-title {
+  line-height: 150%;
   font-family: "Post-No-Bills-Jaffna-SemiBold";
-  font-size: 36px;
+  font-size: calc(25px + 11 * ((100vw - 320px) / 1600));
   font-weight: 600;
-  line-height: 54px;
 }
 
 .header__logo-subtitle {
-  font-size: 12px;
+  font-size: calc(8px + 4 * ((100vw - 320px) / 1600));
   font-weight: 400;
   line-height: 14px;
   letter-spacing: 1.2px;
@@ -362,7 +363,7 @@ body * a {
 
 .header .header__contacts-tel a {
   color: #D4C17F;
-  font-size: 16px;
+  font-size: calc(14px + 16 * ((100vw - 320px) / 1600));
 }
 
 .header .header__contacts-tel::before {
@@ -484,9 +485,11 @@ body * a {
 }
 
 .images__title {
-  position: relative;
+  position: absolute;
+  width: 100%;
+  top: 30%;
+  left: 0;
   z-index: 2;
-  margin-top: 5vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -510,17 +513,17 @@ body * a {
 
 .images__title h1 {
   font-family: Playfair Display;
-  font-size: calc(24px + 1.25vw);
   font-weight: 700;
-  line-height: 64px;
+  line-height: 168.4210526316%;
   text-align: center;
   color: #D4C17F;
   margin-bottom: 7vh;
+  font-size: calc(24px + 24 * ((100vw - 320px) / 1600));
 }
 
 .scroll-img {
   position: absolute;
-  bottom: 20vh;
+  bottom: 15vh;
   left: 50%;
   margin-left: -12px;
   z-index: 2;
@@ -530,7 +533,6 @@ body * a {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-bottom: 5vh;
   opacity: 0;
   -webkit-transition: opacity 0.5s ease 0s;
   -o-transition: opacity 0.5s ease 0s;
@@ -545,14 +547,15 @@ body * a {
 }
 
 .header__contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: absolute;
   bottom: 17vh;
   left: 0;
   width: 100%;
   z-index: 2;
   opacity: 0.7;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -562,34 +565,9 @@ body * a {
   column-gap: 150px;
 }
 
-.header__contacts .header__contacts-map {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 21px;
-  text-align: center;
-  position: relative;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.header__contacts .header__contacts-map:hover {
-  text-shadow: 0px 0px 15px #fff, 0px 0px 5px #D4C17F;
-}
-
-.header__contacts .header__contacts-map::before {
-  content: "";
-  position: absolute;
-  z-index: 2;
-  background: url("../img/icons/nav.svg") 50% no-repeat;
-  left: -35px;
-  top: 0;
-  width: 23px;
-  height: 23px;
-}
-
+.header__contacts .header__contacts-map,
 .header__contacts .header__contacts-tel {
-  font-size: 18px;
+  font-size: calc(14px + 4 * ((100vw - 320px) / 1600));
   font-weight: 400;
   line-height: 21px;
   text-align: center;
@@ -599,19 +577,28 @@ body * a {
   transition: all 0.3s ease;
 }
 
+.header__contacts .header__contacts-map:hover,
 .header__contacts .header__contacts-tel:hover {
   text-shadow: 0px 0px 15px #fff, 0px 0px 5px #D4C17F;
 }
 
+.header__contacts .header__contacts-map::before,
 .header__contacts .header__contacts-tel::before {
   content: "";
   position: absolute;
   z-index: 2;
-  background: url("../img/icons/call.svg") 50% no-repeat;
   left: -35px;
   top: 0;
   width: 23px;
   height: 23px;
+}
+
+.header__contacts .header__contacts-map::before {
+  background: url("../img/icons/nav.svg") 50% no-repeat;
+}
+
+.header__contacts .header__contacts-tel::before {
+  background: url("../img/icons/call.svg") 50% no-repeat;
 }
 
 .content {
@@ -1257,7 +1244,7 @@ body * a {
   height: 20px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .lock {
     overflow: hidden;
   }
@@ -1310,5 +1297,22 @@ body * a {
 
   .header .header__logo {
     z-index: 89;
+  }
+}
+
+@media (max-width: 640px) {
+  .header__logo-title {
+    line-height: 122.2222222222%;
+  }
+
+  .header__contacts {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .scroll-img {
+    display: none;
   }
 }
