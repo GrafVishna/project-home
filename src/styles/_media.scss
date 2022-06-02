@@ -55,6 +55,8 @@
 		flex-direction: column;
 	}
 	.scroll-img {
-		display: none;
+		// display: none;
+		z-index: 3;
+		opacity: 1;
 	}
 }

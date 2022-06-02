@@ -534,10 +534,12 @@ body * a {
 
 .scroll-img {
   position: absolute;
-  bottom: 15vh;
+  width: 25px;
+  height: 34px;
+  bottom: 35vh;
   left: 50%;
   margin-left: -12px;
-  z-index: 2;
+  z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -545,16 +547,16 @@ body * a {
   -ms-flex-pack: center;
   justify-content: center;
   opacity: 0;
-  -webkit-transition: opacity 0.5s ease 0s;
-  -o-transition: opacity 0.5s ease 0s;
-  transition: opacity 0.5s ease 0s;
+  -webkit-transition: opacity 0s ease;
+  -o-transition: opacity 0s ease;
+  transition: opacity 0s ease;
 }
 
 .scroll-img._active {
   -webkit-transition: opacity 1.5s ease 0.5s;
   -o-transition: opacity 1.5s ease 0.5s;
   transition: opacity 1.5s ease 0.5s;
-  opacity: 1;
+  opacity: 0.7;
 }
 
 .header__contacts {
@@ -1324,6 +1326,7 @@ body * a {
   }
 
   .scroll-img {
-    display: none;
+    z-index: 3;
+    opacity: 1;
   }
 }
