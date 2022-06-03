@@ -17,6 +17,8 @@ $font-common: 'Raleway', sans-serif;
 $font-other: 'Playfair Display', serif;
 // -------------------------
 
+// @include adaptiv-font(30, 14);
+
 $maxWidth: 1920;
 @mixin adaptiv-font($pcSize, $mobSize) {
  $addSize: $pcSize - $mobSize;
@@ -70,7 +72,7 @@ body {
 .__title {
 	font-family: Playfair Display;
 	color: $color2;
-	font-size: 36px;
+	@include adaptiv-font(36, 25);
 	font-weight: 700;
 	line-height: 48px;
 }

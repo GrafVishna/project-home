@@ -1,6 +1,16 @@
+@media (max-width: 900px) {
+	.environment {
+		padding: 60px 0 40px 0;
+	}
+}
 @media (max-width: 800px) {
 	.lock {
 		overflow: hidden;
+	}
+	.apartments {
+		&__title {
+			margin-bottom: 50px;
+		}
 	}
 	.header {
 		& .header__contacts-tel {
@@ -47,9 +57,19 @@
 		}
 	}
 }
+@media (max-width: 705px) {
+	.environment__ittems {
+		grid-template-columns: repeat(2, minmax(135px, 195px));
+	}
+	
+}
+
 @media (max-width: 640px) {
 	.header__logo-title {
 		line-height: calc(44 / 36 * 100%);
+	}
+	.apartments {
+		padding: 25px 0 0 0;
 	}
 	.header__contacts {
 		flex-direction: column;
@@ -58,5 +78,28 @@
 		// display: none;
 		z-index: 3;
 		opacity: 1;
+	}
+	.environment {
+		padding: 50px 0 30px 0;
+	}
+}
+@media (max-width: 350px) {
+	.__title {
+		text-align: center;
+	}
+	.environment {
+		padding: 50px 0 0 0;
+	}
+	.environment__ittems {
+		grid-template-columns: repeat(1, minmax(135px, 195px));
+	}
+	.apartments
+	&__ittems {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		gap: 30px;
+	}
+	&__title {
+		margin-bottom: 30px;
 	}
 }

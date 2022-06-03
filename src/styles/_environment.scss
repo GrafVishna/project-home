@@ -14,14 +14,15 @@
 		max-width: 824px;
 		margin: 0 auto;
 		padding: 15px;
-		display: flex;
-		justify-content: space-between;
-		column-gap: 30px;
+		display: grid;
+		grid-template-columns: repeat(4, minmax(135px, 195px));
+		gap: 30px;
+		justify-content: center;
 		align-items: center;
 	}
 
 	&__ittem {
-		max-width: 193px;
+		text-align: center;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -44,10 +45,11 @@
 
 	&__text {
 		font-family: Roboto;
-		font-size: 20px;
+		@include adaptiv-font(20, 16);
 		font-weight: 300;
-		line-height: 27px;
+		line-height: calc(27 / 20 * 100%);
 		text-align: center;
+		height: 50px;
 	}
 	&.__environment {
 		&__ittem1{}

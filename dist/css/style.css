@@ -154,7 +154,7 @@ body * a {
 .__title {
   font-family: Playfair Display;
   color: #D4C17F;
-  font-size: 36px;
+  font-size: calc(25px + 11 * ((100vw - 320px) / 1600));
   font-weight: 700;
   line-height: 48px;
 }
@@ -529,7 +529,7 @@ body * a {
   text-align: center;
   color: #D4C17F;
   margin-bottom: 7vh;
-  font-size: calc(24px + 24 * ((100vw - 320px) / 1600));
+  font-size: calc(30px + 18 * ((100vw - 320px) / 1600));
 }
 
 .scroll-img {
@@ -656,22 +656,21 @@ body * a {
   max-width: 824px;
   margin: 0 auto;
   padding: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-column-gap: 30px;
-  -moz-column-gap: 30px;
-  column-gap: 30px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(135px, 195px))[4];
+  grid-template-columns: repeat(4, minmax(135px, 195px));
+  gap: 30px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
 }
 
 .environment__ittem {
-  max-width: 193px;
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -709,10 +708,11 @@ body * a {
 
 .environment__text {
   font-family: Roboto;
-  font-size: 20px;
+  font-size: calc(16px + 4 * ((100vw - 320px) / 1600));
   font-weight: 300;
-  line-height: 27px;
+  line-height: 135%;
   text-align: center;
+  height: 50px;
 }
 
 .apartments {
@@ -1257,9 +1257,19 @@ body * a {
   height: 20px;
 }
 
+@media (max-width: 900px) {
+  .environment {
+    padding: 60px 0 40px 0;
+  }
+}
+
 @media (max-width: 800px) {
   .lock {
     overflow: hidden;
+  }
+
+  .apartments__title {
+    margin-bottom: 50px;
   }
 
   .header .header__contacts-tel {
@@ -1313,9 +1323,20 @@ body * a {
   }
 }
 
+@media (max-width: 705px) {
+  .environment__ittems {
+    -ms-grid-columns: (minmax(135px, 195px))[2];
+    grid-template-columns: repeat(2, minmax(135px, 195px));
+  }
+}
+
 @media (max-width: 640px) {
   .header__logo-title {
     line-height: 122.2222222222%;
+  }
+
+  .apartments {
+    padding: 25px 0 0 0;
   }
 
   .header__contacts {
@@ -1328,5 +1349,32 @@ body * a {
   .scroll-img {
     z-index: 3;
     opacity: 1;
+  }
+
+  .environment {
+    padding: 50px 0 30px 0;
+  }
+}
+
+@media (max-width: 350px) {
+  .__title {
+    text-align: center;
+  }
+
+  .environment {
+    padding: 50px 0 0 0;
+  }
+
+  .environment__ittems {
+    -ms-grid-columns: (minmax(135px, 195px))[1];
+    grid-template-columns: repeat(1, minmax(135px, 195px));
+  }
+
+  .apartments__ittems {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
   }
 }
