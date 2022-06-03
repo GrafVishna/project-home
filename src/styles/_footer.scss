@@ -7,7 +7,9 @@
 
 	&__body {
 		padding: 60px 0;
-		display: flex;
+		// display: flex;
+		display: grid;
+		grid-template-columns: repeat(4, auto);
 		justify-content: space-between;	
 		align-content: center;
 	}
@@ -23,7 +25,7 @@
 			margin-bottom: 15px;
 		}
 		& a, span {
-			font-size: 14px;
+			@include adaptiv-font(14, 13);
 			font-weight: 400;
 			line-height: 16px;
 			letter-spacing: 0.05em;	
@@ -80,15 +82,3 @@
 
 }
 
-
-.header {
-
-	&__logo {
-	}
-
-	&__logo-title {
-	}
-
-	&__logo-subtitle {
-	}
-}
