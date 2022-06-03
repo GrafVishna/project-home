@@ -1593,6 +1593,7 @@ body * a {
 
   .watch .watch-info {
     width: 70%;
+    margin-bottom: 10px;
   }
 
   .watch__button-block {
@@ -1601,6 +1602,10 @@ body * a {
     -ms-flex-direction: column;
     flex-direction: column;
     row-gap: 10px;
+  }
+
+  .watch__btn {
+    width: 100%;
   }
 }
 

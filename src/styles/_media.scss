@@ -273,6 +273,7 @@
 			}
 			.watch-info {
 				width: 70%;
+				margin-bottom: 10px;
 			}
 		
 			&__button-block {
@@ -281,6 +282,9 @@
 				flex-direction: column;
 				row-gap: 10px;
 
+			}
+			&__btn {
+				width: 100%;
 			}
 		}
 }
