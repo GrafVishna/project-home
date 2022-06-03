@@ -1152,9 +1152,9 @@ body * a {
   -webkit-transition: all 0.8s ease;
   -o-transition: all 0.8s ease;
   transition: all 0.8s ease;
-  -webkit-transform: translateY(200px);
-  -ms-transform: translateY(200px);
-  transform: translateY(200px);
+  -webkit-transform: translateY(100px);
+  -ms-transform: translateY(100px);
+  transform: translateY(100px);
 }
 
 .questions__body._active {
@@ -1257,6 +1257,28 @@ body * a {
   height: 20px;
 }
 
+@media (max-width: 1100px) {
+  .questions {
+    padding: 100px 0 130px 0;
+  }
+
+  .questions__form-body {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .questions-name {
+    -ms-grid-column: 1;
+    grid-column-start: 1;
+    -ms-grid-column-span: 1;
+    grid-column-end: 2;
+    -ms-grid-row: 1;
+    grid-row-start: 1;
+    -ms-grid-row-span: 1;
+    grid-row-end: 2;
+  }
+}
+
 @media (max-width: 975px) {
   .watch {
     margin-bottom: 30px;
@@ -1273,6 +1295,10 @@ body * a {
     padding-left: 0;
   }
 
+  .video_block {
+    padding-bottom: 25px;
+  }
+
   .watch__body {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1280,6 +1306,14 @@ body * a {
     flex-direction: column;
     min-height: auto;
     row-gap: 30px;
+  }
+
+  .maps__conteiner {
+    padding-top: 25px;
+  }
+
+  .maps__title {
+    margin-bottom: 40px;
   }
 }
 
@@ -1344,6 +1378,10 @@ body * a {
     text-align-last: center;
   }
 
+  .questions {
+    padding: 50px 0 100px 0;
+  }
+
   .watch__input-block {
     padding: 10px 0;
     -webkit-column-gap: 10px;
@@ -1396,6 +1434,32 @@ body * a {
   }
 }
 
+@media (max-width: 562px) {
+  .questions {
+    padding: 40px 0 80px 0;
+  }
+
+  .questions__form-body {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 10px;
+  }
+
+  .questions .questions-info {
+    margin: 0 auto;
+    width: 70%;
+    padding: 10px 0;
+    -ms-grid-row: 3;
+    grid-row-start: 3;
+    -ms-grid-row-span: 1;
+    grid-row-end: 4;
+  }
+
+  .questions__title {
+    margin-bottom: 30px;
+  }
+}
+
 @media (max-width: 481px) {
   .apartments__ittems {
     display: -ms-grid;
@@ -1407,6 +1471,10 @@ body * a {
 
   .environment {
     padding: 50px 0 0 0;
+  }
+
+  .environment__img:not(:last-child) {
+    margin-bottom: 20px;
   }
 
   .environment__ittems {
@@ -1450,5 +1518,13 @@ body * a {
 @media (max-width: 350px) {
   .__title {
     margin-bottom: 30px;
+  }
+
+  .maps__conteiner {
+    padding-top: 15px;
+  }
+
+  .video_block {
+    padding-bottom: 15px;
   }
 }
