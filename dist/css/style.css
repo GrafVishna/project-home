@@ -141,7 +141,6 @@ body * a {
 }
 
 .wrapper {
-  height: 100%;
   overflow-x: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
