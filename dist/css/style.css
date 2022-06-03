@@ -985,7 +985,7 @@ body * a {
 }
 
 .watch__content-text {
-  font-size: 16px;
+  font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
   font-weight: 400;
   line-height: 24px;
 }
@@ -1257,6 +1257,32 @@ body * a {
   height: 20px;
 }
 
+@media (max-width: 975px) {
+  .watch {
+    margin-bottom: 30px;
+  }
+
+  .watch__content {
+    padding-right: 0px;
+  }
+
+  .watch__form {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+    padding-left: 0;
+  }
+
+  .watch__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-height: auto;
+    row-gap: 30px;
+  }
+}
+
 @media (max-width: 900px) {
   .environment {
     padding: 60px 0 40px 0;
@@ -1318,8 +1344,18 @@ body * a {
     text-align-last: center;
   }
 
-  .header .header__logo {
-    z-index: 89;
+  .watch__input-block {
+    padding: 10px 0;
+    -webkit-column-gap: 10px;
+    -moz-column-gap: 10px;
+    column-gap: 10px;
+  }
+
+  .watch__button-block {
+    padding: 10px 0;
+    -webkit-column-gap: 10px;
+    -moz-column-gap: 10px;
+    column-gap: 10px;
   }
 }
 
@@ -1354,11 +1390,19 @@ body * a {
   .environment {
     padding: 50px 0 30px 0;
   }
+
+  .watch__content-title:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
-@media (max-width: 350px) {
-  .__title {
-    text-align: center;
+@media (max-width: 481px) {
+  .apartments__ittems {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
   }
 
   .environment {
@@ -1370,11 +1414,41 @@ body * a {
     grid-template-columns: repeat(1, minmax(135px, 195px));
   }
 
-  .apartments__ittems {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[1];
-    grid-template-columns: repeat(1, 1fr);
-    gap: 30px;
+  .__title {
+    text-align: center;
+  }
+
+  .watch__input-block {
+    display: block;
+  }
+
+  .watch__input-block input {
+    width: 100%;
+  }
+
+  .watch__input-block input:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .watch__content-text {
+    text-align: justify;
+  }
+
+  .watch .watch-info {
+    width: 70%;
+  }
+
+  .watch__button-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+}
+
+@media (max-width: 350px) {
+  .__title {
+    margin-bottom: 30px;
   }
 }
