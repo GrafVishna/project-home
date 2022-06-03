@@ -1,6 +1,6 @@
 .footer {
 	background: #2D343C;
-	min-height: 275px;
+	min-height: 295px;
 
 	&__conteiner {
 	}
@@ -52,8 +52,7 @@
 	}
 
 	&__links {
-		margin-bottom: 15px;
-		padding: 0;
+		padding: 0 0 15px 0;
 		& span {
 			margin-right: 5px;
 		}

@@ -60,9 +60,17 @@ body {
    }
 }
 
-.wrapper {
+.header__404 {
+	position: fixed;
+	top: 0;
+	left: 0;
 	width: 100%;
-	overflow: hidden;
+	
+}
+
+.wrapper {
+	height: 100%;
+	overflow-x: hidden;
 	display: flex;
 	flex-direction: column;
 }

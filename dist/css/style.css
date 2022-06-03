@@ -133,9 +133,16 @@ body * a {
   left: 0;
 }
 
-.wrapper {
+.header__404 {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  overflow: hidden;
+}
+
+.wrapper {
+  height: 100%;
+  overflow-x: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1191,7 +1198,7 @@ body * a {
 
 .footer {
   background: #2D343C;
-  min-height: 275px;
+  min-height: 295px;
 }
 
 .footer__body {
@@ -1242,8 +1249,7 @@ body * a {
 }
 
 .footer__links {
-  margin-bottom: 15px;
-  padding: 0;
+  padding: 0 0 15px 0;
 }
 
 .footer__links span {
