@@ -26,6 +26,7 @@ $(document).ready(function () {
 	});
 });
 
+
 $(".scrollto a").on("click", function () {
 	let href = $(this).attr("href");
 
