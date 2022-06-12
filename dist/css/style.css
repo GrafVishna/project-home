@@ -418,6 +418,10 @@ body * a {
   column-gap: 40px;
 }
 
+.header__menu-links.active {
+  padding: 100px 30px;
+}
+
 .header__menu-link {
   font-size: 14px;
   font-weight: 400;
@@ -542,9 +546,9 @@ body * a {
   position: absolute;
   width: 20px;
   height: 33px;
-  bottom: 35vh;
+  bottom: 30vh;
   left: 50%;
-  margin-left: -12px;
+  margin-left: -10px;
   z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -558,6 +562,11 @@ body * a {
   transition: opacity 0s ease;
   -webkit-animation: anim__scroll 20s ease 0s infinite normal forwards;
   animation: anim__scroll 20s ease 0s infinite normal forwards;
+}
+
+.scroll-img img {
+  width: 100%;
+  height: 100%;
 }
 
 .scroll-img._active {
