@@ -1,0 +1,168 @@
+.fullscreen {
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+	object-fit: cover;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	&::before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		background: $gradient;
+	}
+	& img {
+		
+	}
+	& .rellax {
+		position: absolute;
+		width: 100%;
+		height: 110%;
+		top: 0;
+		left: 0;
+		z-index: 1;
+	}
+
+	&__conteiner {
+	}
+
+	&__body {
+		position: relative;
+		z-index: 3;
+	}
+
+	&__content {
+		color: $color2;
+		text-align: center;
+	}
+
+	&__title {
+		font-size: 100px;
+		line-height: 140%;
+		text-transform: uppercase;
+		font-weight: 700;
+		& p {
+			font-weight: normal;
+			font-size: 30px;
+			line-height: 70%;
+		}
+	}
+
+	&__subtitle {
+		font-size: 30px;
+		margin-bottom: 10vh;
+	}
+}
+
+.header {
+	position: absolute;
+	width: 100%;
+	height: 100px;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	&__conteiner {
+	}
+
+	&__body {
+		width: 100%;
+		height: 100px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		& .burger {
+			display: none;
+			width: 35px;
+			height: 35px;
+			background: url("../img/icons/22222.png") 0 0/100% auto no-repeat;
+			transition: all ease 0.3s;
+			opacity: 0.8;
+			cursor: pointer;
+		 }
+		 
+		& .burger.active {
+			transform: rotate(-180deg);
+			background: url("../img/icons/11111.png") 0 0/100% auto no-repeat;
+		 }
+		 & a {
+			 color: $color2;
+		 }
+	}
+
+	&__logo-link {
+		display: inline-flex;
+		align-items: center;
+	}
+	&__logo-img {
+		width: 45px;
+		height: 45px;
+		margin-right: 10px;
+		opacity: 0.5;
+		& img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__logo {
+	}
+	&__logo-title {
+		color: $color2;
+		font-size: 30px;
+		letter-spacing: 1.5px;
+	}
+	&__logo-subtitle {
+		color: $color2;
+
+		text-align: center;
+		letter-spacing: 5px;
+	}
+
+	&__menu {
+	}
+
+	&__links {
+		display: flex;
+		align-items: center;
+	}
+
+	&__link {
+		&:not(:last-child) {
+			margin-right: 20px;
+		}
+	}
+}
+.burger {
+}
+.header--fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	width: 100%;
+	z-index: -1;
+	transition: opacity ease 0.3s;
+	background: linear-gradient(180deg, #242B33 60.98%, #242b33ec 88.04%, #242b3300 100);
+	&.header--is-show {
+		opacity: 1;
+		z-index: 90;
+	}
+}
+.header__city {
+	position: fixed;
+	top: 0;
+	left: 0;
+	opacity: 1;
+	width: 100%;
+	z-index: 10;
+	background: linear-gradient(180deg, #242B33 60.98%, #242b33ec 88.04%, #242b3300 100);
+}
+
+
