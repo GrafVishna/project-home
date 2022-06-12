@@ -544,8 +544,8 @@ body * a {
 
 .scroll-img {
   position: absolute;
-  width: 20px;
-  height: 33px;
+  width: 21px;
+  height: 35px;
   bottom: 30vh;
   left: 50%;
   margin-left: -10px;
@@ -562,11 +562,6 @@ body * a {
   transition: opacity 0s ease;
   -webkit-animation: anim__scroll 20s ease 0s infinite normal forwards;
   animation: anim__scroll 20s ease 0s infinite normal forwards;
-}
-
-.scroll-img img {
-  width: 100%;
-  height: 100%;
 }
 
 .scroll-img._active {

@@ -212,8 +212,8 @@
 
 .scroll-img {
 	position: absolute;
-	width: 20px;
-	height: 33px;
+	width: 21px;
+	height: 35px;
 	bottom: 30vh;
 	left: 50%;
 	margin-left: -10px;
@@ -224,8 +224,7 @@
 	transition: opacity 0s ease;
 	animation: anim__scroll 20s ease 0s infinite normal forwards;
 	& img {
-		width: 100%;
-		height: 100%;
+
 	}
 	&._active {
 		transition: opacity 1.5s ease 0.5s;
